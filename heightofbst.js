@@ -6,9 +6,17 @@ const util = require('util');
 function main () {
   let BST = new binarySearchTree();
 
+  function findHeight (tree) {
+
+  }
 
 
   console.log(util.inspect(BST, false, null));
 }
 
 main();
+
+// Height of a BST
+// Write an algorithm to find the height of a binary search tree. What is the run time of your algorithm?
+// input: binary search tree
+// output: console.logged binary search tree
