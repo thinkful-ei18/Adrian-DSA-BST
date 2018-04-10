@@ -15,42 +15,6 @@ function main () {
   BST.insert(5, 5);
   BST.insert(7, 7);
 
-  // function findHeight (tree, height = 1) {
-  //   if (tree.key === null) {
-  //     height = 0;
-  //     return height;
-  //   }
-
-  //   if (!tree.left && !tree.right){
-  //     return height;
-  //   }
-
-  //   if (tree.right && tree.left) {
-  //     let left = findHeight(tree.left, height + 1) ;
-  //     let right = findHeight(tree.right, height + 1);
-  //     console.log('left', left);
-  //     console.log('right', right);
-
-  //     if (left > right) {
-  //       return left;
-  //     } else {
-  //       return right;
-  //     }
-  //   }
-  //   else if (tree.left) {
-  //     height++;
-  //     findHeight(tree.left, height);
-  //   }
-
-  //   else if (tree.right) {
-  //     height++;
-  //     findHeight(tree.right, height);
-  //   }
-  //   return height;
-  // }
-  // // console.log(util.inspect(BST, false, null));
-  // // console.log(findHeight(BST));
-
   function getHeight (tree) {
 
     if (tree.key === null) {
@@ -67,10 +31,19 @@ function main () {
     }
     return 1;
   }
+
   console.log(getHeight(BST));
 
-}
+  // function computeTreeHeight(tree) {
+  //   return (
+  //     Math.max(
+  //       tree.left && computeTreeHeight(tree.left),
+  //       tree.right && computeTreeHeight(tree.right)
+  //     ) + 1
+  //   );
+  // }
 
+}
 
 main();
 
@@ -78,8 +51,6 @@ main();
 // Write an algorithm to find the height of a binary search tree. What is the run time of your algorithm?
 // input: binary search tree
 // output: number
-
-//
 
 // If the key is null, height = 0; return height
 // If theres no left or right, return height
