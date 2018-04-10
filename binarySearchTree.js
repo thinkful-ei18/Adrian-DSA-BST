@@ -49,7 +49,7 @@ class BinarySearchTree {
 
   find(key) {
     //if the item is found at the root then return that value
-    if (this.key == key) {
+    if (this.key === key) {
       return this.value;
     }
     //if the item you are looking for is less than the root
